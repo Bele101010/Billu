@@ -28,43 +28,31 @@
     <footer>
         <p>&copy; 2024 My Blog</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const blogPostsSection = document.getElementById('blog-posts');
-            const converter = new showdown.Converter();
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const blogPostsSection = document.getElementById('blog-posts');
+        const converter = new showdown.Converter();
+        
+        // Array of Markdown file names
+        const markdownFiles = ['post2.md']; // Add more file names if needed
 
-            // Function to fetch and render Markdown files
-            function renderMarkdown(fileName) {
-                const url = '/p-posts/' + fileName;
-                fetch(url)
-                    .then(response => response.text())
-                    .then(markdown => {
-                        const html = converter.makeHtml(markdown);
-                        blogPostsSection.innerHTML += html;
-                    })
-                    .catch(error => {
-                        console.error('Error fetching Markdown file:', error);
-                    });
-            }
-
-            // Load and render Markdown files
-            fetch('/p-posts/')
+        // Function to fetch and render Markdown files
+        function renderMarkdown(fileName) {
+            const url = 'p-posts/' + fileName; // Constructing the URL
+            fetch(url)
                 .then(response => response.text())
-                .then(text => {
-                    const parser = new DOMParser();
-                    const xml = parser.parseFromString(text, 'text/html');
-                    const links = xml.querySelectorAll('a');
-                    links.forEach(link => {
-                        const fileName = link.getAttribute('href');
-                        if (fileName.endsWith('.md')) {
-                            renderMarkdown(fileName);
-                        }
-                    });
+                .then(markdown => {
+                    const html = converter.makeHtml(markdown);
+                    blogPostsSection.innerHTML += html;
                 })
                 .catch(error => {
-                    console.error('Error fetching Markdown files list:', error);
+                    console.error('Error fetching Markdown file:', error);
                 });
-        });
-    </script>
+        }
+
+        // Load and render Markdown files
+        markdownFiles.forEach(renderMarkdown);
+    });
+</script>
 </body>
 </html>
