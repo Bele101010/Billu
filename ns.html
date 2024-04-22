@@ -35,7 +35,7 @@
 
             // Function to fetch and render Markdown files
             function renderMarkdown(fileName) {
-                const url = '\ns-posts\' + fileName;
+                const url = 'ns-posts' + fileName;
                 fetch(url)
                     .then(response => response.text())
                     .then(markdown => {
@@ -48,7 +48,7 @@
             }
 
             // Load and render Markdown files
-            fetch('\ns-posts\')
+            fetch('ns-posts')
                 .then(response => response.text())
                 .then(text => {
                     const parser = new DOMParser();
