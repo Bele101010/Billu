@@ -1,0 +1,123 @@
+/* General styles */
+
+@font-face {
+    font-family: 'ts';
+    src: url('fonts/Top Secret.ttf') format('truetype'); /* Legacy Browsers */
+}
+
+@font-face {
+    font-family: 'ls';
+    src: url('fonts/LeagueSpartan-Black.ttf') format('truetype'); /* Legacy Browsers */
+}
+
+@font-face {
+    font-family: 'mc';
+    src: url('fonts/Minecrafter.Alt.ttf') format('truetype'); /* Legacy Browsers */
+}
+@font-face {
+    font-family: 'cr';
+    src: url('fonts/ClassroomPersonalUse-7Bv34.ttf') format('truetype'); /* Legacy Browsers */
+}
+@font-face {
+    font-family: 'be';
+    src: url('fonts/BomberEscortCondensedItalic-GOlPm.otf') format('truetype'); /* Legacy Browsers */
+}
+@font-face {
+    font-family: 'hb';
+    src: url('fonts/HelvineBlurDemoRegular-WppJY.otf') format('truetype'); /* Legacy Browsers */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin:0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: #bc0505;
+    padding: 20px;
+    font-family: mc;
+}
+
+nav ul {
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+   
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    
+}
+
+section {
+
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-family:be;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #666;
+    position: relative;
+    padding-left: 25px;
+    font-family: be;
+}
+
+section li:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+
+}
+
+@media (max-width: 767px) {
+nav ul li a {
+    font-size: 6px;
+    padding: 0 0;
+}}
+
+@media (max-width: 1024px) {
+    nav ul li a {
+        font-size: 10px;
+    }}
