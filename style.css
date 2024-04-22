@@ -591,7 +591,7 @@ color: #2b0101;}
     padding: 0 0;
     margin-top: 5%;
 }
- #logo {
+ #command-center logo img {
 
     border: 25px solid transparent; /* Make border transparent */
     background-image: url('images/Fingerprint\ unlocking\ effect.gif'); /* Replace 'path/to/your/image.jpg' with your image path */
@@ -608,7 +608,7 @@ color: #2b0101;}
 #command-center img {
 
     border: 25px solid transparent; /* Make border transparent */
-    background-image: url('images/Fingerprint\ unlocking\ effect.gif'); /* Replace 'path/to/your/image.jpg' with your image path */
+    background-image: url('images/THE TOMORROW PEOPLE.gif'); /* Replace 'path/to/your/image.jpg' with your image path */
     background-size:initial; /* Adjust size to cover the container */
     background-position: center; /* Position the image in the center */
     border-radius: 50%; /* Make the image round */
@@ -670,7 +670,7 @@ color: #2b0101;}
     }
 
     .about-text {
-        width: 220px; /* Decrease width of the text */
+        width: 260px; /* Decrease width of the text */
         height: auto;
         padding: 15px; /* Adjust padding */
         font-size: 12px; /* Decrease font size */
@@ -882,8 +882,5 @@ color: #2b0101;}
  }
 }
 
-@media (max-width: 767px) {
-.pbig-card {
-    margin-left: 0%;
-}
+
 }
