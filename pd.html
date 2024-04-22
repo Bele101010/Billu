@@ -40,7 +40,7 @@
 
         // Function to fetch and render Markdown files
         function renderMarkdown(fileName) {
-            const url = 'p-posts/' + fileName; // Constructing the URL
+            const url = 's-posts/' + fileName; // Constructing the URL
             fetch(url)
                 .then(response => response.text())
                 .then(markdown => {
